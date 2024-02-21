@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return "Hello, World! but changed 2"
+    return "Hello, World! but changed for the third time"
 
 @app.route("/git_update", methods=['POST'])
 def git_update():
