@@ -1,11 +1,16 @@
-from flask import Flask
+from flask import Flask, render_template
 import git
 
 app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return "Hello, World! but changed for the third time"
+    return render_template('home.html')
+
+@app.route("/dashboard")
+def contact():
+    return "hi"
+
 
 @app.route("/git_update", methods=['POST'])
 def git_update():
